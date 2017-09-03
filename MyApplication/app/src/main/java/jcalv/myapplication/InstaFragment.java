@@ -1,5 +1,6 @@
 package jcalv.myapplication;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -32,7 +33,29 @@ public class InstaFragment extends Fragment {
         viewPager.setAdapter(new InstaAdapter(getActivity().getSupportFragmentManager()));
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-        tabLayout.setupWithViewPager(viewPager);
+        if (tabLayout != null){
+            tabLayout.setupWithViewPager(viewPager);
+
+            for ( int i = 0; i < tabLayout.getTabCount(); i++){
+                TabLayout.Tab tab= tabLayout.getTabAt(i);
+                Drawable icon = null;
+                switch (i){
+                    case 0:
+                        icon = getResources().getDrawable(R.drawable.insta_camara);
+                        break;
+                    case 1:
+                        icon = getResources().getDrawable(R.drawable.insta_corazon);
+                        break;
+                    case 2:
+                        icon = getResources().getDrawable(R.drawable.insta_buscar);
+                        break;
+                }
+                if (tab !=null){
+                    tab.setIcon(icon);
+                }
+            }
+
+        }
     }
 
     @Override
@@ -55,17 +78,10 @@ public class InstaFragment extends Fragment {
     private class InstaAdapter extends BaseViewPageAdapter {
 
         public InstaAdapter(FragmentManager manager) {
-            super(manager, new String[]{"POP", "ROCK", "REGGAE"},  new String[]{
-                    "La música pop (del inglés pop music, contracción de popular music) es un " +
-                            "género de música popular que tuvo su origen a finales de los años " +
-                            "1950 como una derivación del rock and roll, en combinación con " +
-                            "otros géneros musicales que estaban en moda en aquel momento.",
-                    "El rock es un término amplio que agrupa a una variedad de géneros musicales. " +
-                            "Su forma originaria, conocida como rock and roll, surgió mayormente " +
-                            "de la combinación de dos géneros anteriores como eran el rhythm and " +
-                            "blues y el country.",
-                    "El reggae es un género musical que se desarrolló por primera vez en Jamaica " +
-                            "hacia mediados de los años 1960."
+            super(manager, new String[]{" ", " ", " "},  new String[]{
+                    "Fotografías",
+                    "Imágenes guardadas",
+                    "Buscar"
             });
         }
     }

@@ -14,7 +14,8 @@
         android:layout_height="200dp"
         android:src="@drawable/home_logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp" />
+        android:layout_marginTop="53dp"
+        android:id="@+id/imageView" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,8 +23,7 @@
         android:textSize="24sp"
         android:text="Inicio"
         android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="180dp" />
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
