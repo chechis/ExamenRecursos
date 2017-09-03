@@ -24,7 +24,7 @@ public class BaseViewPageAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return BaseFragment;
+        return BaseFragment.getInstance(tabs[position], descriptions[position]);
     }
 
     @Override

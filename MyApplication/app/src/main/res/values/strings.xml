@@ -2,9 +2,11 @@
     <string name="app_name">My Application</string>
     <string name="inicio_titulo">Inicio</string>
     <string name="face_titulo">Facebook</string>
-    <string name="google_logo">Google</string>
+    <string name="google_logo">Google Plus</string>
     <string name="insta_titulo">Instagram</string>
     <string name="pajaro_titulo">Twitter</string>
     <string name="compartir_titulo">Compartir</string>
     <string name="configuracion_titulo">Configuracion</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
 </resources>
