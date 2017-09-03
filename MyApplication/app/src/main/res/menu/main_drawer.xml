@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/main_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_logo"
+            android:title="@string/inicio_titulo"/>
+        <item
+            android:id="@+id/nav_face"
+            android:icon="@drawable/face_logo"
+            android:title="@string/face_titulo"/>
+        <item
+            android:id="@+id/nav_google"
+            android:icon="@drawable/google_logo"
+            android:title="@string/google_logo"/>
+        <item
+            android:id="@+id/nav_insta"
+            android:icon="@drawable/insta_logo"
+            android:title="@string/insta_titulo"/>
+        <item
+            android:id="@+id/nav_pajaro"
+            android:icon="@drawable/pajarito_logo"
+            android:title="@string/pajaro_titulo"/>
+    </group>
+</menu>
