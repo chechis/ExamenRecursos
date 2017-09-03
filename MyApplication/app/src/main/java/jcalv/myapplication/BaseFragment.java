@@ -20,6 +20,7 @@ public class BaseFragment extends Fragment{
     private static final String ARG_DESCRIPTION = "description";
 
 
+
     public static BaseFragment getInstance(String name, String description){
         BaseFragment fragment = new BaseFragment();
 

@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import jcalv.myapplication.adapter.BaseViewPageAdapter;
 
@@ -41,13 +42,13 @@ public class FaceFragment extends Fragment {
                 Drawable icon = null;
                 switch (i){
                     case 0:
-                        icon = getResources().getDrawable(R.drawable.face_logo);
+                        icon = getResources().getDrawable(R.drawable.face_nota);
                         break;
                     case 1:
-                        icon = getResources().getDrawable(R.drawable.face_logo);
+                        icon = getResources().getDrawable(R.drawable.face_amistad);
                         break;
                     case 2:
-                        icon = getResources().getDrawable(R.drawable.face_logo);
+                        icon = getResources().getDrawable(R.drawable.face_globo);
                         break;
                 }
                 if (tab !=null){
@@ -78,17 +79,10 @@ public class FaceFragment extends Fragment {
     private class FaceAdapter extends BaseViewPageAdapter{
 
         public FaceAdapter(FragmentManager manager) {
-            super(manager, new String[]{"POP", "ROCK", "REGGAE"},  new String[]{
-                    "La música pop (del inglés pop music, contracción de popular music) es un " +
-                            "género de música popular que tuvo su origen a finales de los años " +
-                            "1950 como una derivación del rock and roll, en combinación con " +
-                            "otros géneros musicales que estaban en moda en aquel momento.",
-                    "El rock es un término amplio que agrupa a una variedad de géneros musicales. " +
-                            "Su forma originaria, conocida como rock and roll, surgió mayormente " +
-                            "de la combinación de dos géneros anteriores como eran el rhythm and " +
-                            "blues y el country.",
-                    "El reggae es un género musical que se desarrolló por primera vez en Jamaica " +
-                            "hacia mediados de los años 1960."
+            super(manager, new String[]{" ", " ", " "},  new String[]{
+                    "Noticias",
+                    "Solicitudes",
+                    "Notificaciones"
             });
         }
     }
