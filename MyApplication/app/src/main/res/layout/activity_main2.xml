@@ -7,6 +7,11 @@
     android:layout_height="match_parent"
     tools:context="jcalv.myapplication.Main2Activity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contenedor" />
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,8 +29,6 @@
             app:titleTextColor="@android:color/white"
             android:titleTextAppearance="@style/AppTheme.Title"
             style="@style/MyToolbar"/>
-
-        <include layout="@layout/content_confi"/>
 
     </android.support.design.widget.AppBarLayout>
 </android.support.design.widget.CoordinatorLayout>

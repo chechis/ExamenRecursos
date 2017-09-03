@@ -133,8 +133,9 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void navegar (){
-        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-        startActivity(intent);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, new Main2Activity())
+                .addToBackStack(null).commit();
 
     }
 
