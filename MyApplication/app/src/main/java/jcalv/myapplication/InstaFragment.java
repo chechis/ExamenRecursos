@@ -1,5 +1,6 @@
 package jcalv.myapplication;
 
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -33,6 +34,9 @@ public class InstaFragment extends Fragment {
         viewPager.setAdapter(new InstaAdapter(getActivity().getSupportFragmentManager()));
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+
+        Drawable color=new ColorDrawable(getResources().getColor(R.color.insta));
+        tabLayout.setBackground(color);
         if (tabLayout != null){
             tabLayout.setupWithViewPager(viewPager);
 
@@ -65,6 +69,9 @@ public class InstaFragment extends Fragment {
             MainActivity activity=(MainActivity) getActivity();
             activity.updateView(getString(R.string.insta_titulo));
             activity.navigationView.setCheckedItem(R.id.nav_insta);
+
+            Drawable color=new ColorDrawable(getResources().getColor(R.color.insta));
+            activity.getSupportActionBar().setBackgroundDrawable(color);
         }
     }
 

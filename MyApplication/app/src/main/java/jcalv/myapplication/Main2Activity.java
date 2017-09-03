@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class Main2Activity extends Fragment {
+
+    Toolbar toolbar;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -20,6 +23,17 @@ public class Main2Activity extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbarDetalle);
+
+
+
     }
 
     @Override

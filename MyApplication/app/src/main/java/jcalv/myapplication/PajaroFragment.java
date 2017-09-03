@@ -1,5 +1,6 @@
 package jcalv.myapplication;
 
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -33,6 +34,9 @@ public class PajaroFragment extends Fragment {
         viewPager.setAdapter(new PajaroAdapter(getActivity().getSupportFragmentManager()));
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+        Drawable color=new ColorDrawable(getResources().getColor(R.color.pajaro));
+        tabLayout.setBackground(color);
+
         if (tabLayout != null){
             tabLayout.setupWithViewPager(viewPager);
 
@@ -65,6 +69,9 @@ public class PajaroFragment extends Fragment {
             MainActivity activity=(MainActivity) getActivity();
             activity.updateView(getString(R.string.pajaro_titulo));
             activity.navigationView.setCheckedItem(R.id.nav_pajaro);
+
+            Drawable color=new ColorDrawable(getResources().getColor(R.color.pajaro));
+            activity.getSupportActionBar().setBackgroundDrawable(color);
         }
     }
 

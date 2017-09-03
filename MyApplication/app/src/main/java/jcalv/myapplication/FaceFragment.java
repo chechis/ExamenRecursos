@@ -1,12 +1,15 @@
 package jcalv.myapplication;
 
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +37,10 @@ public class FaceFragment extends Fragment {
         viewPager.setAdapter(new FaceAdapter(getActivity().getSupportFragmentManager()));
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+
+        Drawable color=new ColorDrawable(getResources().getColor(R.color.face));
+        tabLayout.setBackground(color);
+
         if (tabLayout != null){
             tabLayout.setupWithViewPager(viewPager);
 
@@ -66,6 +73,10 @@ public class FaceFragment extends Fragment {
             MainActivity activity=(MainActivity) getActivity();
             activity.updateView(getString(R.string.face_titulo));
             activity.navigationView.setCheckedItem(R.id.nav_face);
+
+            Drawable color=new ColorDrawable(getResources().getColor(R.color.face));
+            activity.getSupportActionBar().setBackgroundDrawable(color);
+
         }
     }
 
@@ -74,6 +85,7 @@ public class FaceFragment extends Fragment {
         super.onResume();
         MainActivity activity= (MainActivity) getActivity();
         activity.navigationView.setCheckedItem(R.id.nav_face);
+
     }
 
     private class FaceAdapter extends BaseViewPageAdapter{

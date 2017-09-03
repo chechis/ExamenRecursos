@@ -1,5 +1,6 @@
 package jcalv.myapplication;
 
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -32,6 +33,10 @@ public class GoogleFragment extends Fragment {
         viewPager.setAdapter(new GoogleAdapter(getActivity().getSupportFragmentManager()));
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+
+        Drawable color=new ColorDrawable(getResources().getColor(R.color.google));
+        tabLayout.setBackground(color);
+
         if (tabLayout != null){
             tabLayout.setupWithViewPager(viewPager);
 
@@ -64,6 +69,10 @@ public class GoogleFragment extends Fragment {
             MainActivity activity=(MainActivity) getActivity();
             activity.updateView(getString(R.string.google_logo));
             activity.navigationView.setCheckedItem(R.id.nav_google);
+
+            Drawable color=new ColorDrawable(getResources().getColor(R.color.google));
+            activity.getSupportActionBar().setBackgroundDrawable(color);
+
         }
     }
 

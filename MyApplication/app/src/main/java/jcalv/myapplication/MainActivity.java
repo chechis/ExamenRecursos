@@ -1,8 +1,12 @@
 package jcalv.myapplication;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.design.widget.NavigationView;
@@ -70,26 +74,36 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         Fragment fragment = null;
-
-        TextView textView = (TextView) findViewById(R.id.text_title);
-
-
+        final int colorHome=ContextCompat.getColor(getBaseContext(),R.color.colorPrimaryDark);
+        final int colorFace=ContextCompat.getColor(getBaseContext(),R.color.faceEstatus);
+        final int colorInsta=ContextCompat.getColor(getBaseContext(),R.color.instaEstatus);
+        final int colorGoogle=ContextCompat.getColor(getBaseContext(),R.color.googleEstatus);
+        final int colorPajaro=ContextCompat.getColor(getBaseContext(),R.color.pajaroEstatus);
         switch (id) {
 
             case R.id.nav_home:
                 fragment = new MainFragment();
+
                 break;
             case R.id.nav_face:
                 fragment = new FaceFragment();
+                if (Build.VERSION.SDK_INT >=21){
+                getWindow().setStatusBarColor(colorFace);}
                 break;
             case R.id.nav_insta:
                 fragment = new InstaFragment();
+                if (Build.VERSION.SDK_INT >=21){
+                    getWindow().setStatusBarColor(colorInsta);}
                 break;
             case R.id.nav_google:
                 fragment = new GoogleFragment();
+                if (Build.VERSION.SDK_INT >=21){
+                    getWindow().setStatusBarColor(colorGoogle);}
                 break;
             case R.id.nav_pajaro:
                 fragment = new PajaroFragment();
+                if (Build.VERSION.SDK_INT >=21){
+                    getWindow().setStatusBarColor(colorPajaro);}
                 break;
         }
         if (fragment!=null)
