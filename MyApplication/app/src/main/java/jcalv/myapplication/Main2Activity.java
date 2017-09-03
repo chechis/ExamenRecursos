@@ -1,5 +1,7 @@
 package jcalv.myapplication;
 
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class Main2Activity extends Fragment {
-
-    Toolbar toolbar;
 
     @Nullable
     @Override
@@ -24,15 +24,11 @@ public class Main2Activity extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbarDetalle);
-
-
 
     }
 
@@ -40,5 +36,8 @@ public class Main2Activity extends Fragment {
     public void onResume() {
         super.onResume();
         getActivity().setTitle("Configuracion");
+
+
     }
 }
+

@@ -83,7 +83,8 @@ public class MainActivity extends AppCompatActivity
 
             case R.id.nav_home:
                 fragment = new MainFragment();
-
+                if (Build.VERSION.SDK_INT >=21){
+                    getWindow().setStatusBarColor(colorHome);}
                 break;
             case R.id.nav_face:
                 fragment = new FaceFragment();
@@ -150,6 +151,10 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container, new Main2Activity())
                 .addToBackStack(null).commit();
+
+        final int colorHome=ContextCompat.getColor(getBaseContext(),R.color.colorPrimaryDark);
+        if (Build.VERSION.SDK_INT >=21){
+            getWindow().setStatusBarColor(colorHome);}
 
     }
 

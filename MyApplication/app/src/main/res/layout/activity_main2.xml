@@ -31,4 +31,5 @@
             style="@style/MyToolbar"/>
 
     </android.support.design.widget.AppBarLayout>
+    <include layout="@layout/content_confi"/>
 </android.support.design.widget.CoordinatorLayout>
