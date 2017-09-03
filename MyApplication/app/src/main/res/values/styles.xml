@@ -17,6 +17,15 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+    <style name="AppTheme.Title">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="MyToolbar">
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark</item>
+        <item name="navigationIcon">@drawable/atras</item>
+        <item name="android:background">?colorPrimary</item>
+    </style>
+
 
 
 </resources>

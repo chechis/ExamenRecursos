@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
     }
 
-
-
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(navigationView))
@@ -129,19 +127,15 @@ public class MainActivity extends AppCompatActivity
         if (id==R.id.accion1){
             seleccionarRed();
         } else if (id==R.id.accion2){
-            navegar("https://www.youtube.com/channel/UCnHTPVmbx6JWKv8o6taUeXg", ContextCompat.getColor(this, R.color.colorAccent));
+            navegar();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public void navegar (String url, int color){
+    public void navegar (){
+        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+        startActivity(intent);
 
-        CustomTabsIntent.Builder builder= new CustomTabsIntent.Builder();
-        if (color != -1) builder.setToolbarColor(color);
-        builder.setStartAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-        builder.setExitAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-        CustomTabsIntent customTabsIntent = builder.build();
-        customTabsIntent.launchUrl(this, Uri.parse(url));
     }
 
     public void seleccionarRed (){
